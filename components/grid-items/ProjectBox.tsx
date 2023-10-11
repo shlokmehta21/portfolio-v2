@@ -18,7 +18,7 @@ const ProjectBox: FC<ProjectBoxProps> = ({ item }) => {
             {item.description}
           </p>
 
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <ul className="flex flex-wrap mt-3 gap-2 sm:mt-auto">
             {item?.tags?.map((tag, index) => (
               <li
                 className="bg-black/[0.7] px-3 py-1 text-[0.6rem] md:text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
@@ -29,7 +29,7 @@ const ProjectBox: FC<ProjectBoxProps> = ({ item }) => {
             ))}
           </ul>
 
-          <div className="flex items-center mt-5 sm:mt-auto gap-5">
+          <div className="flex items-center mt-3 sm:mt-auto gap-5">
             <Link
               href={item.siteLink as string}
               target="_blank"
@@ -42,7 +42,7 @@ const ProjectBox: FC<ProjectBoxProps> = ({ item }) => {
             <Link
               href={item.githubLink as string}
               target="_blank"
-              className="flex items-center gap-2 border border-neutral-200 dark:border-neutral-800 px-2 py-1 md:px-3 md:py-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
+              className="flex items-center  gap-2 border border-neutral-200 dark:border-neutral-800 px-2 py-1 md:px-3 md:py-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
             >
               <GithubIcon size={16} />
               GitHub
