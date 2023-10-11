@@ -1,7 +1,9 @@
+"use client";
 import { GridItemInterface } from "@/config/site-config";
 import { FC } from "react";
-import Icon from "../icons";
 import Button from "../button";
+import { DownloadIcon, GithubIcon, LinkedinIcon } from "lucide-react";
+import Link from "next/link";
 
 interface SocialBoxProps {
   item: GridItemInterface;
@@ -9,12 +11,25 @@ interface SocialBoxProps {
 
 const SocialBox: FC<SocialBoxProps> = ({ item }) => {
   return (
-    <div>
+    <Link href={item.buttonLink as string} target="_blank">
       {/* Header */}
       <div className="flex items-center justify-between">
         {/* Icon */}
-        <Icon type={item.icon as string} />
+        {item.icon === "github" ? <GithubIcon /> : <></>}
+        {item.icon === "linkedin" ? <LinkedinIcon /> : <></>}
+        {item.icon === "download" ? <DownloadIcon /> : <></>}
         {/* Button */}
+        <div className="xl:hidden md:hidden sm:hidden">
+          {item.buttonTitle === "Download" ? (
+            <></>
+          ) : (
+            <Button
+              text={(item.buttonTitle as string) ?? ""}
+              secondaryText={item.buttonSecondaryText}
+              color={item.color}
+            />
+          )}
+        </div>
         {item.layout === "2x2" && (
           <Button
             text={(item.buttonTitle as string) ?? ""}
@@ -26,7 +41,7 @@ const SocialBox: FC<SocialBoxProps> = ({ item }) => {
       {/* Content container */}
       <div className="mt-2">
         {/* Title */}
-        <div className="text-lg font-semibold">{item.title}</div>
+        <div className=" text-lg font-semibold">{item.title}</div>
         {/* Username */}
         <div className="text-sm text-neutral-500">{item.username}</div>
         {/* Description */}
@@ -37,8 +52,9 @@ const SocialBox: FC<SocialBoxProps> = ({ item }) => {
         )}
       </div>
       {/* button */}
+
       {item.layout === "1x2" && (
-        <div className="mt-2">
+        <div className="mt-2 hidden sm:block">
           <Button
             text={(item.buttonTitle as string) ?? ""}
             secondaryText={item.buttonSecondaryText}
@@ -46,7 +62,7 @@ const SocialBox: FC<SocialBoxProps> = ({ item }) => {
           />
         </div>
       )}
-    </div>
+    </Link>
   );
 };
 
