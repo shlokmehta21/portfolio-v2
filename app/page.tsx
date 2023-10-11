@@ -1,4 +1,3 @@
-"use client";
 import Footer from "@/components/footer";
 import LeftSide from "@/components/left-side";
 import RightSide from "@/components/right-side";

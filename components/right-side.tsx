@@ -6,6 +6,7 @@ import SocialBox from "./grid-items/SocialBox";
 import ProjectBox from "./grid-items/ProjectBox";
 import WorkBox from "./grid-items/WorkBox";
 import { stagger, useAnimate } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const staggerDelay = stagger(0.02);
 

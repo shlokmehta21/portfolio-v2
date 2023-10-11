@@ -1,7 +1,8 @@
+"use client";
+
 import { GridItemInterface } from "@/config/site-config";
 import { Briefcase } from "lucide-react";
 import { FC } from "react";
-
 interface WorkBoxProps {
   item: GridItemInterface;
 }
