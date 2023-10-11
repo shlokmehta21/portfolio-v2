@@ -26,11 +26,11 @@ const LeftSide: FC<LeftSideProps> = ({}) => {
         {/* Content container */}
         <div>
           {/* Title */}
-          <div className="flex items-center">
+          <div className="flex items-start sm:items-center flex-col-reverse sm:flex-row">
             <p className="text-lg sm:text-xl text-primary font-medium">
               {siteConfig.title}
             </p>
-            <div className="flex items-center justify-between ml-3 bg-green-500/25 px-2 sm:px-2 md:px-3 py-1 rounded-full">
+            <div className="flex items-center justify-between mb-2 sm:mb-0 sm:ml-3 bg-green-500/25 px-2 sm:px-2 md:px-3 py-1 rounded-full">
               <span className="relative flex h-3 w-3 align-top">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
