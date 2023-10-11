@@ -27,10 +27,10 @@ const LeftSide: FC<LeftSideProps> = ({}) => {
         <div>
           {/* Title */}
           <div className="flex items-center">
-            <p className="text-xl text-primary font-medium">
+            <p className="text-lg sm:text-xl text-primary font-medium">
               {siteConfig.title}
             </p>
-            <div className="flex items-center justify-between ml-4 bg-green-500/25 px-2 md:px-3 py-1 rounded-full">
+            <div className="flex items-center justify-between ml-3 bg-green-500/25 px-2 sm:px-2 md:px-3 py-1 rounded-full">
               <span className="relative flex h-3 w-3 align-top">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
@@ -45,7 +45,7 @@ const LeftSide: FC<LeftSideProps> = ({}) => {
             {siteConfig.creator}
           </h1>
           {/* Bio */}
-          <p className="text-xl sm:text-2xl text-neutral-500 font-light">
+          <p className="text-lg sm:text-2xl text-neutral-500 font-light">
             {siteConfig.bio}
           </p>
         </div>
@@ -54,14 +54,14 @@ const LeftSide: FC<LeftSideProps> = ({}) => {
           <a
             href={`${siteConfig.locationLink}`}
             target="_blank"
-            className="flex items-center w-full gap-2 px-4 py-2 text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
+            className="flex items-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
           >
             <MapPin size="14" />
             {siteConfig.location}
           </a>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="flex items-center w-full gap-2 px-4 py-2 text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
+            className="flex items-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
           >
             <Mail size="14" />
             Contact Me
