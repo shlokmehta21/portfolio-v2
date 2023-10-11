@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { siteConfig } from "@/config/site-config";
+import { Analytics } from "@vercel/analytics/react";
 
 const sfPRO = localFont({
   src: [
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className={sfPRO.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col h-full">{children}</div>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
