@@ -2,10 +2,9 @@
 import { cn } from "@/utils/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
-import { FC, use, useEffect } from "react";
+import { FC } from "react";
 import { useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
 
 const variants = cva(
   "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center border border-neutral-100 dark:border-neutral-800 ",

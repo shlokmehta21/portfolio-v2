@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { siteConfig } from "@/config/site-config";
 import { Analytics } from "@vercel/analytics/react";
+import Providers from "@/components/Providers";
+import Favicon from "/public/favicon.ico";
+import { Toaster } from "@/components/ui/toaster";
 
 const sfPRO = localFont({
   src: [
@@ -44,6 +47,7 @@ const sfPRO = localFont({
 export const metadata: Metadata = {
   title: "Shlok Mehta",
   description: siteConfig.bio,
+  icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({
@@ -52,11 +56,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html lang="en" className="h-full">
       <body className={sfPRO.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col h-full">{children}</div>
-          <Analytics />
+          <Providers>
+            <div className="flex flex-col h-full">{children}</div>
+            <Toaster />
+
+            <Analytics />
+          </Providers>
         </ThemeProvider>
       </body>
     </html>

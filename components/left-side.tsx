@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site-config";
 import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 import Footer from "./footer";
+import Chat from "./chat/Chat";
 
 interface LeftSideProps {}
 
@@ -50,22 +51,26 @@ const LeftSide: FC<LeftSideProps> = ({}) => {
           </p>
         </div>
         {/* Buttons Container */}
-        <div className="flex items-center gap-3 py-5">
+        <div className="flex items-center gap-3 pt-4">
           <a
             href={`${siteConfig.locationLink}`}
             target="_blank"
-            className="flex items-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
+            className="flex items-center justify-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
           >
             <MapPin size="14" />
             {siteConfig.location}
           </a>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="flex items-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
+            className="flex items-center justify-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25"
           >
             <Mail size="14" />
             Contact Me
           </a>
+        </div>
+
+        <div className="flex items-center gap-3 pb-5">
+          <Chat />
         </div>
         {/* Footer */}
         <div className="hidden xl:block">
