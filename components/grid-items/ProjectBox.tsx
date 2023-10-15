@@ -1,3 +1,5 @@
+"use client";
+
 import { GridItemInterface, siteConfig } from "@/config/site-config";
 import { ExternalLinkIcon, GithubIcon } from "lucide-react";
 import Image from "next/image";

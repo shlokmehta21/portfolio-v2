@@ -6,7 +6,6 @@ import SocialBox from "./grid-items/SocialBox";
 import ProjectBox from "./grid-items/ProjectBox";
 import WorkBox from "./grid-items/WorkBox";
 import { stagger, useAnimate } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 const staggerDelay = stagger(0.02);
 
@@ -44,11 +43,11 @@ const RightSide: FC<RightSideProps> = ({}) => {
         {/* Grid items */}
         {siteConfig.items.map((item, i) => (
           <GridItem key={item.title + i} size={item.layout}>
-            {item.type === "social" ? <SocialBox item={item} /> : <></>}
+            {item.type === "social" && <SocialBox item={item} />}
 
-            {item.type === "project" ? <ProjectBox item={item} /> : <></>}
+            {item.type === "project" && <ProjectBox item={item} />}
 
-            {item.type === "experiance" ? <WorkBox item={item} /> : <></>}
+            {item.type === "experience" && <WorkBox item={item} />}
           </GridItem>
         ))}
       </div>

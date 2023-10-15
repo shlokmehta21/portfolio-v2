@@ -7,7 +7,7 @@ import { useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTheme } from "next-themes";
 
 const variants = cva(
-  "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center border border-neutral-100 dark:border-neutral-800 ",
+  "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center border border-neutral-100 dark:border-neutral-800",
   {
     variants: {
       size: {

@@ -1,5 +1,5 @@
 export type GridItemLayout = "1x2" | "2x2" | "4x3";
-export type GridItemtype = "social" | "experiance" | "skill" | "project";
+export type GridItemtype = "social" | "experience" | "skill" | "project";
 
 export interface GridItemInterface {
   layout: GridItemLayout;
@@ -99,13 +99,13 @@ export const GridItems: GridItemInterface[] = [
   },
   {
     layout: "2x2",
-    type: "experiance",
+    type: "experience",
     title: "Freelance Software Engineer @Ultimate World.",
     description: "June 2023 - Present",
   },
   {
     layout: "2x2",
-    type: "experiance",
+    type: "experience",
     title: "Software Development intern @Vadict Inc.",
     description: "April 2021 - June 2021",
   },
