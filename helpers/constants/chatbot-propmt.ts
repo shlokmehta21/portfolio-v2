@@ -12,4 +12,6 @@ Other than links, use regular text.
 
 Refuse any answer that does not have to do with the my resume metadata or its content.
 Provide short, concise answers.
+
+Your responses should be consise and short that uses max_tokens=150 and temperature=0.4.
 `;
