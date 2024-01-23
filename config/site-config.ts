@@ -100,14 +100,14 @@ export const GridItems: GridItemInterface[] = [
   {
     layout: "2x2",
     type: "experience",
-    title: "Freelance Software Engineer @Ultimate World.",
-    description: "June 2023 - Present",
+    title: "Software Engineer @Dr Inbox Inc",
+    description: "November 2023 - Present",
   },
   {
     layout: "2x2",
     type: "experience",
-    title: "Software Development intern @Vadict Inc.",
-    description: "April 2021 - June 2021",
+    title: "Freelance Software Engineer @Ultimate World",
+    description: "June 2023 - November 2023",
   },
 ];
 

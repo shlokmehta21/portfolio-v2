@@ -48,6 +48,9 @@ const ChatMessages: FC<ChatMessagesProps> = ({ className, ...props }) => {
                 >
                   <MarkdownLite text={message.text} />
                 </p>
+                <div className="text-xs text-zinc-500 dark:text-zinc-400">
+                  {message.isUserMessage ? "You" : "Shlok"}
+                </div>
               </div>
             </div>
           </div>
