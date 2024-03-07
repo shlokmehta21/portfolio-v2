@@ -31,7 +31,7 @@ export const GridItems: GridItemInterface[] = [
     color: "#fff",
     buttonTitle: "Download",
     buttonLink:
-      "https://drive.google.com/file/d/1R5yxLSHrq-hyZEtDMUhaS9FDevCAmfUj/view?usp=drive_link",
+      "https://drive.google.com/file/d/10GVaDNIYXZXpfSTKGBdvQo9mpJIrs4l7/view",
   },
   {
     layout: "1x2",
