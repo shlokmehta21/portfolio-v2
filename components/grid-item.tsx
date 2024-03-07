@@ -22,11 +22,12 @@ const variants = cva(
   }
 );
 
-type GridItemProps = { children: React.ReactNode } & VariantProps<
-  typeof variants
->;
+type GridItemProps = {
+  children: React.ReactNode;
+  onClick?: () => void;
+} & VariantProps<typeof variants>;
 
-const GridItem: FC<GridItemProps> = ({ size, children }) => {
+const GridItem: FC<GridItemProps> = ({ size, children, onClick }) => {
   const { theme } = useTheme();
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -41,6 +42,7 @@ const GridItem: FC<GridItemProps> = ({ size, children }) => {
 
   return (
     <motion.div
+      onClick={onClick}
       initial={{
         opacity: 0,
         y: 60,

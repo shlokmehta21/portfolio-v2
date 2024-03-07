@@ -11,15 +11,36 @@ export const shlokData = `
 <work_experience>
   <job>
     <employer>Ultimate World</employer>
-    <dates>June 2023 - present</dates>
+    <dates>June 2023 - November 2023</dates>
     <position>Software Engineer</position>
     <responsibilities>
       <responsibility>
-        Collaborated with a team to develop an AI-powered immigration system using Next.js, Tailwind CSS, TypeScript,
-        and Supabase, aiding applicants in their Canadian immigration journey.
+        Led the development of Vaato AI, an AI-powered contextual conversation partner designed to revolutionize interview preparation, utilizing Next.js, TypeScript, and Supabase for a seamless, scalable, and responsive user experience.
       </responsibility>
       <responsibility>
-        Actively participated in team meetings, contributing to project requirements and goals.
+        Integrated machine learning algorithms, including the use of OpenAI's API, to simulate realistic interview scenarios in Vaato AI. This advanced integration enables users to practice and hone their interviewing skills through highly personalized feedback and insights, significantly enhancing the tool's ability to prepare users for real-world interviews.
+      </responsibility>
+      <responsibility>
+        Collaborated closely with UX/UI designers to develop a user-friendly interface for Vaato AI, focusing on ease of use and accessibility, resulting in a 40% increase in user engagement.
+      </responsibility>
+    </responsibilities>
+  </job>
+  <job>
+    <employer>Dr Inbox Inc</employer>
+    <dates>November 2023 - March 2024</dates>
+    <position>Software Engineer</position>
+    <responsibilities>
+      <responsibility>
+        Spearheaded the migration of the application's codebase from a Single Page Application (SPA) framework to a Server-Side Rendering (SSR) architecture using Svelte.js and Next.js 14, enhancing app performance and security by 70%.
+      </responsibility>
+      <responsibility>
+        Designed and implemented a comprehensive testing infrastructure utilizing Playwright, which streamlined the testing process, reduced bugs in production by 80%, and improved deployment efficiency and product reliability.
+      </responsibility>
+      <responsibility>
+        Developed an innovative feature enabling doctors to create and share custom forms with patients for online completion and submission via fax or email, directly contributing to enhanced patient care and generating significant new revenue streams.
+      </responsibility>
+      <responsibility>
+        Revamped the landing page and main app interface to be more responsive and user-friendly, resulting in a marked improvement in user experience (UX) and a significant increase in user engagement rates.
       </responsibility>
     </responsibilities>
   </job>
@@ -41,16 +62,16 @@ export const shlokData = `
   </job>
 </work_experience>
 <skills>
-  <languages>Javascript, Typescript, Java, C#, SQL</languages>
+  <languages>Javascript, Typescript, Java, Python, SQL</languages>
   <front_end>
-    React.js, React Native, Next.js, Redux.js, Material UI, HTML, CSS, SCSS, Tailwind CSS
+    React.js, React Native, Next.js, Redux.js, HTML, CSS, SCSS, Tailwind CSS
   </front_end>
   <back_end>
-    Node.js, Express.js, .Net Core, RESTful APIs, GraphQL, Prisma
+    Node.js, Express.js, Django, RESTful APIs, GraphQL, Prisma
   </back_end>
-  <databases>MongoDB, MySQL, Supabase</databases>
-  <tools>Git, Github, Figma</tools>
-  <testing>Cypress, Jest, Unit Testing</testing>
+  <databases>MongoDB, MySQL, Supabase, DynamoDB</databases>
+  <tools>Git, Github, AWS, Figma</tools>
+  <testing>Cypress, Jest, PlayWright</testing>
 </skills>
 <projects>
   <project>
@@ -94,6 +115,4 @@ export const shlokData = `
   <dates>2017 - 2020</dates>
 </education>
 </resume>
-
-
 `;

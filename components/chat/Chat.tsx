@@ -22,6 +22,9 @@ const Chat: FC<ChatProps> = ({}) => {
         <button className="flex items-center justify-center w-full gap-2 px-4 py-2 text-xs sm:text-sm font-medium border rounded-md border-neutral-200 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-800/25">
           <MessageCircle size="14" />
           Chat with me
+          <div className="bg-gradient-to-r dark:from-stone-900 dark:to-stone-800 border dark:border-0 rounded-md text-xs px-3 py-0.5 font-semibold">
+            AI ✨
+          </div>
         </button>
       </DialogTrigger>
 
