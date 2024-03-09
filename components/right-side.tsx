@@ -8,15 +8,11 @@ import WorkBox, { TitleComponent } from "./grid-items/WorkBox";
 import { stagger, useAnimate } from "framer-motion";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerPortal,
-  DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer";
 import { FollowerPointerCard } from "./ui/following-pointer";
 
@@ -55,10 +51,11 @@ const RightSide: FC<RightSideProps> = ({}) => {
         open={open}
         onClose={() => setOpen(false)}
         shouldScaleBackground
-        snapPoints={["550px", "0"]}
+        snapPoints={["800px", "0"]}
       >
         <DrawerPortal>
           <DrawerOverlay className="fixed inset-0 bg-black/40" />
+
           <DrawerContent className=" border-stone-900 overflow-x-scroll">
             <DrawerDescription>
               <div className="w-full py-12">

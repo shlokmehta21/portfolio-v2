@@ -11,7 +11,7 @@ interface SocialBoxProps {
 
 const SocialBox: FC<SocialBoxProps> = ({ item }) => {
   return (
-    <Link href={item.buttonLink as string} target="_blank">
+    <Link href={item.pageLink ?? (item.buttonLink as string)} target="_blank">
       {/* Header */}
       <div className="flex items-center justify-between">
         {/* Icon */}

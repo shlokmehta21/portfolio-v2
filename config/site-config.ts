@@ -18,6 +18,7 @@ export interface GridItemInterface {
   location?: string;
   siteLink?: string;
   githubLink?: string;
+  pageLink?: string;
 }
 
 export const GridItems: GridItemInterface[] = [
@@ -30,6 +31,7 @@ export const GridItems: GridItemInterface[] = [
       "Download my Resume/CV to learn more about my work experience and education history.",
     color: "#fff",
     buttonTitle: "Download",
+    pageLink: "/resume",
     buttonLink:
       "https://drive.google.com/file/d/10GVaDNIYXZXpfSTKGBdvQo9mpJIrs4l7/view",
   },
