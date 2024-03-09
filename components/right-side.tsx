@@ -51,16 +51,27 @@ const RightSide: FC<RightSideProps> = ({}) => {
 
   return (
     <>
-      <Drawer open={open} onClose={() => setOpen(false)}>
+      <Drawer
+        open={open}
+        onClose={() => setOpen(false)}
+        shouldScaleBackground
+        snapPoints={["550px", "0"]}
+      >
         <DrawerPortal>
           <DrawerOverlay className="fixed inset-0 bg-black/40" />
-          <DrawerContent className=" border-stone-900">
+          <DrawerContent className=" border-stone-900 overflow-x-scroll">
             <DrawerDescription>
               <div className="w-full py-12">
                 <div className="container space-y-12 px-4 md:space-y-16 md:px-6">
                   <div className="space-y-2">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl flex items-center justify-between">
                       Work Experience
+                      <button
+                        className="font-thin text-md text-gray-200 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ease-in-out"
+                        onClick={() => setOpen(false)}
+                      >
+                        x
+                      </button>
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400">
                       Heres a summary of my work experience and accomplishments{" "}
