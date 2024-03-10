@@ -24,6 +24,7 @@ const RightSide: FC<RightSideProps> = ({}) => {
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
   const [cardItem, setCardItem] = useState<GridItemInterface>();
+  const [snapPoints, setSnapPoints] = useState(["550px", "0"]);
 
   useEffect(() => {
     if (scope.current) {
@@ -43,6 +44,19 @@ const RightSide: FC<RightSideProps> = ({}) => {
         }
       );
     }
+
+    // Function to update snap points based on current window height
+    const updateSnapPoints = () => {
+      const vh80 = window.innerHeight * 0.7 + "px"; // 80% of viewport height
+      setSnapPoints([vh80, "0"]);
+    };
+
+    // Update snap points on component mount and window resize
+    updateSnapPoints();
+    window.addEventListener("resize", updateSnapPoints);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", updateSnapPoints);
   }, [scope]);
 
   return (
@@ -51,7 +65,7 @@ const RightSide: FC<RightSideProps> = ({}) => {
         open={open}
         onClose={() => setOpen(false)}
         shouldScaleBackground
-        snapPoints={["800px", "0"]}
+        snapPoints={snapPoints}
       >
         <DrawerPortal>
           <DrawerOverlay className="fixed inset-0 bg-black/40" />
