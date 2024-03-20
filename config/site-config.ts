@@ -33,7 +33,7 @@ export const GridItems: GridItemInterface[] = [
     buttonTitle: "Download",
     pageLink: "/resume",
     buttonLink:
-      "https://drive.google.com/file/d/10GVaDNIYXZXpfSTKGBdvQo9mpJIrs4l7/view",
+      "https://drive.google.com/file/d/1_e2eThQ_x_xYvwM9OAlK6alCKtSU9PL_/view",
   },
   {
     layout: "1x2",

@@ -3,7 +3,7 @@ export default function Resume() {
     <main className="w-full h-full">
       <object
         data={
-          "https://drive.google.com/file/d/10GVaDNIYXZXpfSTKGBdvQo9mpJIrs4l7/preview?export=download"
+          "https://drive.google.com/file/d/1_e2eThQ_x_xYvwM9OAlK6alCKtSU9PL_/preview?export=download"
         }
         type="application/pdf"
         width="100%"
